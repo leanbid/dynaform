@@ -59,7 +59,7 @@ Creating custom types is a three step process:
 
 A minimal custom type created as by doing the following:
 
-'''
+```
 (function(){
   
   //create instance
@@ -79,11 +79,11 @@ A minimal custom type created as by doing the following:
   Dynamform.addType(foo_type);
   
 })();
-'''
+```
 
 Here is a more advanced example where we'll create a custom editor:
 
-'''
+```
 (function(){
   
   //create instance
@@ -114,6 +114,6 @@ Here is a more advanced example where we'll create a custom editor:
   Dynamform.addType(foo_type);
   
 })();
-'''
+```
 
 Of course in the above above we could have used an Ajax dialog.
