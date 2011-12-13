@@ -4,7 +4,7 @@ Dynaform is JQuery plugin that allows you to build and edit web forms in your br
 
 ## Installation
 
-To install make sure JQuery along with the following Javascript files have been loaded in your html header:
+Make sure JQuery along with the following Javascript files have been loaded in your html header:
 
 * dynaform.jquery.js
 * example_extension.dynaform.jquery.js etc...
