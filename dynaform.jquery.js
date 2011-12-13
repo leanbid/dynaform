@@ -15,7 +15,7 @@ function DynaformType(){
     return prompt("Please enter label:", this.defaultLabel());
   };
   
-  this.html = function(){
+  this.previewHtml = function(){
     return "<input type=\"text\" value=\"(textbox)\" disabled />";
   };
   
@@ -88,6 +88,10 @@ function DynaformType(){
     return "{" + items.join(",") + "}";
   }
   
+  function html_escape(data){
+    return data.replace(/&/, "&amp;").replace(/</, "&lt;").replace(/>/, "&gt;").replace(/\"/, "&quot;");
+  }
+  
   function Editor(form_input){
     var that = this;
     var container = $('<div class="dynaform_editor">');
@@ -120,7 +124,7 @@ function DynaformType(){
 
         (function(i){
           
-          var cell = $("<td valign=\"top\" class=\"label\">"+input.label+"</td><td class=\"preview\">"+types[input.type].html()+"</td>");
+          var cell = $("<td valign=\"top\" class=\"label\">"+html_escape(input.label)+"</td><td class=\"preview\">"+types[input.type].previewHtml()+"</td>");
           $(row).append(cell);
           
           var cell = $("<td valign=\"top\"><a href=\"javascript:;\" class=\"button edit\">Edit</a></td>");
@@ -169,8 +173,6 @@ function DynaformType(){
           } 
           
         })(parseInt(i));
-        
-        
       }
       
       var row = $("<tr>");

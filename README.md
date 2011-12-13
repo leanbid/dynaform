@@ -7,9 +7,9 @@ Dynaform is JQuery plugin that allows you to build and edit web forms in your br
 Make sure JQuery along with the following Javascript files have been loaded in your html header:
 
 * dynaform.jquery.js
-* example_extension.dynaform.jquery.js etc...
+* example_type.dynaform.jquery.js etc...
 
-Current extensions include:
+Current types include:
 
 * textbox.dynaform.jquery.js
 * textarea.dynaform.jquery.js
@@ -21,4 +21,31 @@ Current extensions include:
 Once the above installation is complete Dynaform is really easy to use - simple add a "dynaform" class attribute to any form input element e.g:
 
 > &lt;input name="form_schema" type="hidden" class="dynaform" /&gt;
+
+## API
+
+### The "Dynaform" object
+
+The Dynaform API is exposed through the "Dynamform" object, which has two methods.
+
+#### Dynamform.addType(DynaformType type);
+
+This method allows you to define your own types. For more on creating custom types please see the "Creating Custom Types".
+
+#### Dynamform.type(String name);
+
+The method allows you get any type that has already been added by name e.g.:
+
+> var textbox_type =  Dynamform.type("textbox");
+
+You could now (if you wanted to) modify this type with a custom preview;
+
+> textbox_type.htmlPreview = function(){
+>   return "My custom preview!!!";
+> };
+
+### Creating Custom Types
+
+Coming soon
+
 

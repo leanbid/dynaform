@@ -6,7 +6,7 @@
     return "tickbox";
   };
   
-  type.html = function(){
+  type.previewHtml = function(){
     return "<input type=\"checkbox\" disabled /> (tickbox)";
   };
   

@@ -6,7 +6,7 @@
     return "textarea";
   };
   
-  type.html = function(){
+  type.previewHtml = function(){
     return "<textarea cols=\"50\" rows=\"5\" disabled>(textarea)</textarea>";
   };
   

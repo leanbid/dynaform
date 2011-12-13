@@ -6,7 +6,7 @@
     return "email";
   };
   
-  type.html = function(){
+  type.previewHtml = function(){
     return "<input type=\"text\" value=\"(email)\" disabled />";
   };
   
