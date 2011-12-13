@@ -26,13 +26,16 @@ Once the above installation is complete Dynaform is really easy to use - simple 
 
 ### The "Dynaform" object
 
-The Dynaform API is exposed through the "Dynamform" object, which has two methods.
+The Dynaform API is exposed through the "Dynamform" object, which has two methods:
 
-#### Dynamform.addType(DynaformType type);
+* addType(DynaformType type)
+* type(String name)
+
+#### Dynamform.addType(DynaformType type)
 
 This method allows you to define your own types. For more on creating custom types please see the "Creating Custom Types".
 
-#### Dynamform.type(String name);
+#### Dynamform.type(String name)
 
 The method allows you get any type that has already been added by name e.g.:
 
@@ -46,6 +49,10 @@ You could now (if you wanted to) modify this type with a custom preview;
 
 ### Creating Custom Types
 
-Coming soon
+
+
+#### DynamformType class
+
+
 
 
