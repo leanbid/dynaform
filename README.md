@@ -43,9 +43,11 @@ The method allows you get any type that has already been added by name e.g.:
 
 You could now (if you wanted to) modify this type with a custom preview;
 
-> textbox_type.htmlPreview = function(){ 
->   return "My custom preview!!!";
-> };
+``` 
+textbox_type.htmlPreview = function(){ 
+  return "My custom preview!!!";
+};
+```
 
 ### Creating Custom Types
 
