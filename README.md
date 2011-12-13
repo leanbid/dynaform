@@ -24,7 +24,7 @@ Once the above installation is complete Dynaform is really easy to use - simply 
 
 The element's value attribute element can be optionally set with a JSON based form schema.
 
-&lt;input name="form_schema" type="hidden" class="dynaform" value='[{"type": "textbox", "label": "Name"}]' /&gt;
+> &lt;input name="form_schema" type="hidden" class="dynaform" value='[{"type": "textbox", "label": "Name"}]' /&gt;
 
 The input element's value attribute gets automatically updated with a JSON representation of the form's schema.
 
