@@ -1,0 +1,22 @@
+<html>
+<head>
+<link href="example.dynaform.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="jquery-1.7.1.min.js"></script>
+<script src="dynaform.jquery.js"></script>
+<script src="textbox.dynaform.jquery.js"></script>
+<script src="textarea.dynaform.jquery.js"></script>
+<script src="tickbox.dynaform.jquery.js"></script>
+<script src="email.dynaform.jquery.js"></script>
+</head>
+<body>
+
+<div>
+  <input id="form_schema" type="hidden" value='{"inputs": [{"type": "textbox", "label": "Name"}, {"type": "email", "label": "Email"}, {"type": "textarea", "label": "Address"}, {"type": "tickbox", "label": "Student?"}]}' class="dynaform" />
+</div>
+
+<hr />
+
+<input type="button" value="Alert Form Schema" onclick="alert($('#form_schema').val());" />
+
+</body>
+</html>
