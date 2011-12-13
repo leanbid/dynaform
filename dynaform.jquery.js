@@ -173,9 +173,9 @@ function DynaformType(){
         
       }
       
-      var row = $("<tr><td>&nbsp;</td></tr>");
+      var row = $("<tr>");
       $(table).append(row);
-      var cell = $("<td>");
+      var cell = $("<td colspan=\"6\">");
       $(row).append(cell);
       var insert_select = $("<select>");
       $(cell).append(insert_select);

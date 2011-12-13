@@ -7,6 +7,15 @@
   display: inline-block;
 }
 
+.dynaform_editor td {
+  font-size: 0.8em;
+}
+
+.dynaform_editor th {
+  font-size: 0.8em;
+  text-align: left;
+}
+
 .dynaform_editor .button {
   font-size: 0.6em;
   padding: 1px;
