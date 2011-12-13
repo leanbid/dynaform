@@ -39,11 +39,13 @@ This method allows you to define your own types. For more information on creatin
 
 The method allows you get any type that has already been added by name e.g.:
 
-> var textbox_type =  Dynamform.type("textbox");
+```javascript
+var textbox_type =  Dynamform.type("textbox");
+```
 
 You could now (if you wanted to) modify this type with a custom preview:
 
-``` 
+```javascript
 textbox_type.htmlPreview = function(){ 
   return "My custom preview!!!";
 };
@@ -59,7 +61,7 @@ Creating custom types is a three step process:
 
 A minimal custom type created as by doing the following:
 
-```
+```javascript
 (function(){
   
   //create instance
@@ -83,7 +85,7 @@ A minimal custom type created as by doing the following:
 
 Here is a more advanced example where we'll create a custom editor:
 
-```
+```javascript
 (function(){
   
   //create instance
