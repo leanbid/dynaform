@@ -33,7 +33,7 @@ The Dynaform API is exposed through the "Dynamform" object, which has two method
 
 #### Dynamform.addType(DynaformType type)
 
-This method allows you to define your own types. For more on creating custom types please see the "Creating Custom Types".
+This method allows you to define your own types. For more information on creating custom types please see the "Creating Custom Types" section (below).
 
 #### Dynamform.type(String name)
 
@@ -43,9 +43,9 @@ The method allows you get any type that has already been added by name e.g.:
 
 You could now (if you wanted to) modify this type with a custom preview;
 
-> textbox_type.htmlPreview = function(){
+> '''textbox_type.htmlPreview = function(){ 
 >   return "My custom preview!!!";
-> };
+> };'''
 
 ### Creating Custom Types
 
