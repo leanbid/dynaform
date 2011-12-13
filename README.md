@@ -18,7 +18,7 @@ Current types include:
 
 ## How to use
 
-Once the above installation is complete Dynaform is really easy to use - simple add a "dynaform" class attribute to any form input element e.g:
+Once the above installation is complete Dynaform is really easy to use - simply add a "dynaform" class attribute to any form input element e.g:
 
 > &lt;input name="form_schema" type="hidden" class="dynaform" /&gt;
 
@@ -43,9 +43,9 @@ The method allows you get any type that has already been added by name e.g.:
 
 You could now (if you wanted to) modify this type with a custom preview;
 
-> '''textbox_type.htmlPreview = function(){ 
+> textbox_type.htmlPreview = function(){ 
 >   return "My custom preview!!!";
-> };'''
+> };
 
 ### Creating Custom Types
 
