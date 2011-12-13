@@ -20,6 +20,5 @@ Current extensions include:
 
 Once the above installation is complete Dynaform is really easy to use - simple add a "dynaform" class attribute to any form input element e.g:
 
-```
- <input name="form_schema" type="hidden" class="dynaform" />
-```
+> <input name="form_schema" type="hidden" class="dynaform" />
+
