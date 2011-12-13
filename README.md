@@ -41,7 +41,7 @@ The method allows you get any type that has already been added by name e.g.:
 
 > var textbox_type =  Dynamform.type("textbox");
 
-You could now (if you wanted to) modify this type with a custom preview;
+You could now (if you wanted to) modify this type with a custom preview:
 
 ``` 
 textbox_type.htmlPreview = function(){ 
@@ -51,10 +51,69 @@ textbox_type.htmlPreview = function(){
 
 ### Creating Custom Types
 
+Creating custom types is a three step process:
 
+1. Create an instance of the DynamformType class.
+2. Customise the DynamformType instance by overriding special methods.
+3. Add the DynamformType instance to the Dynamaform object.
 
-#### DynamformType class
+A minimal custom type created as by doing the following:
 
+'''
+(function(){
+  
+  //create instance
+  var foo_type = new DynamformType();
+  
+  //customise
+  foo_type.name = function(){ 
+    return "foo";
+  };
+  
+  foo_type.htmlPreview = function(){ 
+    return "This is what foo will look like.";
+  };
+  
+  //add type to Dynamform object
+  
+  Dynamform.addType(foo_type);
+  
+})();
+'''
 
+Here is a more advanced example where we'll create a custom editor:
 
+'''
+(function(){
+  
+  //create instance
+  var bar_type = new DynamformType();
+  
+  //customise
+  bar_type.name = function(){ 
+    return "bar";
+  };
+  
+  bar_type.htmlPreview = function(){ 
+    return "This is what bar will look like.";
+  };
+  
+  //lets define the initial model for this input
+  bar_type.model = function(){ 
+    return {label: "", favourite_color: "red"};
+  };
+  
+  bar_type.edit = function(state){
+    state.label = prompt("Please enter label:", state.label);
+    state.favourite_color = prompt("What is your favourite color:", state.favourite_color);
+    state.save();
+  };
+  
+  //add type to Dynamform object
+  
+  Dynamform.addType(foo_type);
+  
+})();
+'''
 
+Of course in the above above we could have used an Ajax dialog.
