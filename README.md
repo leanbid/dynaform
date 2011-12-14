@@ -121,7 +121,7 @@ Here is a more advanced example where we'll create a custom editor:
   };
   
   //lets define the initial model for this input
-  bar_type.model = function(){ 
+  bar_type.defaultModel = function(){ 
     return {label: "", favourite_color: "red"};
   };
   
