@@ -7,31 +7,24 @@ function DynaformType(){
     return 'textbox';
   };
   
-  this.defaultLabel = function(){
-    return "";
-  };
-  
-  this.label = function(){
-    return prompt("Please enter label:", this.defaultLabel());
-  };
-  
   this.previewHtml = function(){
     return "<input type=\"text\" value=\"(textbox)\" disabled />";
+  };
+
+  this.defaultModel = function(){
+    return {type: this.name(), label: ""};
   };
   
   this.edit = function(state){
     state.label = prompt("Please enter label:", state.label);
-    if(state.label != ''){
+    if(state.label != '' && state.label != null){
       state.save();
     }
   };
   
-  this.model = function(){
-    var label = this.label();
-    if(label){
-      return {type: this.name(), label: label}
-    }
-  };
+  this.add = function(state){
+    this.edit(state);
+  }
   
   this.confirmDeleteMessage = function(){
     return "Are you sure you want to delete this " + this.name() + "?";
@@ -188,11 +181,12 @@ function DynaformType(){
       }
 
       $(insert_select).change(function(){
-        var input_model = types[$(this).val()].model();
-        if(input_model){
+        var type = $(this).val();
+        $(this).val("");
+        types[type].add(new InputState(types[type].defaultModel(), function(input_model){
           model.inputs.push(input_model);
-        }
-        update();
+          update();
+        }));
       });
       
       $(form_input).val(to_json_string(model));
